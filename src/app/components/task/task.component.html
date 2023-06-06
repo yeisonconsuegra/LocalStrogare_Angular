@@ -1,0 +1,12 @@
+<div class="card mb-2">
+    <div class="card-header d-flex justify-content-between align-item-center">
+        {{tasky.title}}
+        <div>
+            <button class="btn btn-primary" (click)="tasky.oculto = !tasky.oculto " >Show</button>
+            <button  class="btn btn-danger" (click)="deleteTask(tasky)">Delete</button>
+        </div>
+    </div>
+    <div class="card-body" [hidden]="tasky.oculto">
+        {{tasky.descripcion}}
+    </div>
+</div>
